@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title= title 
+    style.
+      body {
+      width: 95%;
+      margin: 1em auto;
+      text-align: center;
+      }
+      .bg1 {
+      background-color: lightblue;
+      }
+      .bg0 {
+      background-color: pink; 
+      }
+  body(class= isMale ? "bg1" : "bg0")
+    h1= title
+    hr
+    p 你好， #{userName} #{appellation} 歡迎光臨！

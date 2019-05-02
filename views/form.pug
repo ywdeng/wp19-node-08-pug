@@ -1,0 +1,45 @@
+doctype html
+html
+  head
+    title= title
+    style.
+      body {
+      width: 95%;
+      margin: 1em auto;
+      background-color: black;
+      color: white;
+      text-align: center;
+      }
+      table {
+      margin: 1em auto;
+      }
+      .left {
+      text-align: left;
+      }
+      .center {
+      text-align: center;
+      }
+      .right {
+      text-align: right;
+      }
+  body
+    h1= title 
+    hr
+    form(action='/', method='post')
+      table
+        tbody
+          tr
+            th.right 請輸入您的姓名：
+            td.left
+              input(type='text', name='userName', required='')
+          tr
+            th.right 性別：
+            td.left
+              input#genderMale(type='radio', name='gender', value='male')
+              label(for='genderMale') 男
+              input#genderFemale(type='radio', name='gender', value='female', checked='')
+              label(for='genderFemale') 女
+          tr
+            td.center(colspan='2')
+              input(type='submit')
+              input(type='reset')
